@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript 玩學室</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-lockup">
+          <div class="js-mark">JS</div>
+          <div>
+            <strong>玩學室</strong>
+            <span>JavaScript Lab</span>
+          </div>
+        </div>
+        <div class="learner-card">
+          <div class="avatar">小</div>
+          <div><strong>新手探險家</strong><span>今天也學一點</span></div>
+          <span class="streak">3 DAY</span>
+        </div>
+        <div class="side-label">學習路線</div>
+        <nav id="lessonNav" class="lesson-nav" aria-label="學習章節"></nav>
+        <div class="sidebar-foot">
+          <div class="mini-progress"><span id="sideProgressBar"></span></div>
+          <div class="progress-row"><span>學習進度</span><strong id="sideProgressText">0%</strong></div>
+          <button id="resetAll" class="text-button">↺ 重置學習紀錄</button>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div class="crumbs"><span>JavaScript</span><b>/</b><strong id="crumbTitle">基礎語法</strong></div>
+          <div class="top-actions"><span class="status-dot"></span><span>學習模式</span><button id="mobileMenu" class="icon-button" aria-label="開啟選單">☰</button></div>
+        </header>
+
+        <section class="hero-row">
+          <div>
+            <p class="eyebrow">INTERACTIVE PLAYGROUND <span></span></p>
+            <h1>JavaScript <em>玩學室</em></h1>
+            <p class="hero-copy">把每一行程式碼變成看得見、摸得到的結果。選一個案例，動手玩玩看。</p>
+          </div>
+          <div class="overall-progress">
+            <div class="progress-meta"><span>你的探索進度</span><strong id="progressText">0 / 12</strong></div>
+            <div class="progress-track"><span id="progressBar"></span></div>
+            <p>完成案例後會自動點亮章節</p>
+          </div>
+        </section>
+
+        <section class="chapter-strip" id="chapterStrip"></section>
+
+        <section class="lesson-layout">
+          <article class="lesson-card">
+            <div class="lesson-tag" id="lessonTag">01 / 基礎語法</div>
+            <h2 id="lessonTitle">先讓 JavaScript 認識你</h2>
+            <p id="lessonDescription" class="lesson-description"></p>
+            <div class="learn-box">
+              <div class="learn-box-title"><span class="spark">✦</span> 初學者筆記</div>
+              <p id="lessonTip"></p>
+            </div>
+            <div class="code-preview"><div><span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span><small>example.js</small></div><pre id="codePreview"></pre></div>
+            <button id="challengeButton" class="challenge-button">完成這個挑戰 <span>→</span></button>
+          </article>
+
+          <article class="playground-card">
+            <div class="playground-head"><div><div class="overline">PLAYGROUND <span class="live-pill">LIVE</span></div><h2 id="demoTitle"></h2></div><button id="resetDemo" class="ghost-button">↻ 重玩</button></div>
+            <div id="demoArea" class="demo-area"></div>
+            <div class="observe-bar"><span class="observe-icon">●</span><div><strong>你正在觀察：</strong><span id="observeText">JavaScript 會立刻回應你的操作。</span></div></div>
+          </article>
+        </section>
+
+        <section class="explore-section">
+          <div class="section-heading"><div><p class="eyebrow">MORE TO EXPLORE</p><h2>還有這些小實驗</h2></div><span id="caseCount">12 個案例</span></div>
+          <div id="caseGrid" class="case-grid"></div>
+        </section>
+      </main>
+    </div>
+    <div id="toast" class="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
